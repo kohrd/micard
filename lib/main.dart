@@ -16,6 +16,8 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.cyan[900],
         body: SafeArea(
           child: Column(
+            // crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
                 radius: 50.0,
@@ -41,72 +43,64 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 50,
+                width: 150,
+                child: Divider(
+                  color: Colors.teal.shade100,
+                ),
               ),
               // Container( // zamieniamy Container na Card
-          Card(
+
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 30),
                 // padding: EdgeInsets.all(10),
                 // height: 25, // usuwam to ogranicza height kontenera
                 color: Colors.white,
 
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Row(
-                    children: <Widget>[
-                      Icon(
-                        Icons.phone,
-                        size: 20,
-                        color: Colors.cyan[900],
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Text(
-                        '+44 876 231 234',
-                        style: TextStyle(
-                          color: Colors.cyan[900],
-                          fontFamily: 'SourceSansPro-SemiBold',
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15,
-                        ),
-                      ),
-                    ],
+                // padding: const EdgeInsets.all(20.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    size: 20,
+                    color: Colors.cyan[900],
+                  ),
+                  title: Text(
+                    '+44 876 231 234',
+                    style: TextStyle(
+                      color: Colors.cyan[900],
+                      fontFamily: 'SourceSansPro-SemiBold',
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15,
+                    ),
                   ),
                 ),
               ),
               // Container(  // zamieniamy Container na Card
-          Card(
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 30),
-                // padding: EdgeInsets.all(10),
-                // height: 25, // usuwam to ogranicza height kontenera
+                // // padding: EdgeInsets.all(10),
+                // // height: 25, // usuwam to ogranicza height kontenera
                 color: Colors.white,
-
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Row(
-                    children: <Widget>[
-                      Icon(
-                        Icons.email,
-                        size: 20,
-                        color: Colors.cyan[900],
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Text(
-                        'giga.chad@mail.ch',
-                        style: TextStyle(
-                          color: Colors.cyan[900],
-                          fontFamily: 'SourceSansPro-SemiBold',
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15,
-                        ),
-                      ),
-                    ],
+                // child: Padding(
+                //     padding: const EdgeInsets.all(20.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.mail,
+                    size: 20,
+                    color: Colors.cyan[900],
+                  ),
+                  title: Text(
+                    'giga.chad@mail.ch',
+                    style: TextStyle(
+                      color: Colors.cyan[900],
+                      fontFamily: 'SourceSansPro-SemiBold',
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15,
+                    ),
                   ),
                 ),
               ),
+              // ),
             ],
             // mainAxisAlignment: MainAxisAlignment.center,
           ),
